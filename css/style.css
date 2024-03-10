@@ -1,5 +1,8 @@
 header>h1{
     text-align: center;
+    background-color: rgba(131, 43, 21, 0.308);
+    color: black;
+    border-radius: 8px;
 }
 
 .main-container{
@@ -7,7 +10,8 @@ header>h1{
 }
 
 .container-item{
-    border: 1px solid;
+    border-style: double;
+    border-color: saddlebrown;
     width: 100%;
     padding: 24px;
 }
@@ -16,33 +20,32 @@ header>h1{
     text-align: center;
 }
 
-.container-result{
-    text-align: center;
-    background-color: #fbfbfb;
-    padding-top: 8px;
-    padding-bottom: 24px;
-}
-
 .container-form{
     text-align: left;
-    background-color: #fbfbfb;
+    background-color: rgba(241, 255, 202, 0.3);
     padding: 24px;
+}
+
+.container-result{
+    text-align: center;
+    background-color: rgba(241, 255, 202, 0.3);
+    padding-top: 8px;
+    padding-bottom: 24px;
 }
 
 .container-form>div{
     padding: 8px;
 }
 
-.container-form>p{
-    margin-top: 0;
-    line-height: 1.5;
+.container-form>div>label{
+    font-weight: bold;
 }
 
 .form-item{
     height: 24px;
     border: 0px;
     border-radius: 8px;
-    background-color: lightcyan;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 button{
@@ -53,10 +56,28 @@ button{
     padding-left: 24px;
     background-color: lightblue;
     border-radius: 8px;
+    transition: background-color 0.4s ease;
 }
 
 #calculate-button{
-    color: black;
     background-color: bisque;
-    
+    color: black;
+   
+}
+
+#calculate-button:hover{
+    background-color: brown;
+    color: white;
+}
+
+#reset-button:hover{
+    background-color: navy;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
