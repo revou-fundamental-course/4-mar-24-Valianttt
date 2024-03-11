@@ -1,23 +1,23 @@
     document.addEventListener('DOMContentLoaded', function () {
 
-        var calculateButton = document.getElementById('calculate-button');
-        var weightInput = document.querySelector('input[name="weight"]');
-        var heightInput = document.querySelector('input[name="height"]');
-        var ageInput = document.querySelector('input[name="age"]');
-        var resultContainer = document.querySelector('.container-result h1');
-        var resultText = document.querySelector('.container-result h4');
-        var resetButton = document.getElementById('reset-button');
-        var resultSection = document.querySelector('.result');
-        var resultSuggestion = document.querySelector('.suggestion');
+        const calculateButton = document.getElementById('calculate-button');
+        const weightInput = document.querySelector('input[name="weight"]');
+        const heightInput = document.querySelector('input[name="height"]');
+        const ageInput = document.querySelector('input[name="age"]');
+        let resultContainer = document.querySelector('.container-result h1');
+        let resultText = document.querySelector('.container-result h4');
+        const resetButton = document.getElementById('reset-button');
+        let resultSection = document.querySelector('.result');
+        let resultSuggestion = document.querySelector('.suggestion');
     
         calculateButton.addEventListener('click', function () {
 
-            var weight = parseFloat(weightInput.value);
-            var height = parseFloat(heightInput.value);
-            var age = parseFloat(ageInput.value);
+            let weight = parseFloat(weightInput.value);
+            let height = parseFloat(heightInput.value);
+            let age = parseFloat(ageInput.value);
 
-            var genderRadios = document.querySelectorAll('input[name="gender"]');
-            var selectedGender = Array.from(genderRadios).find(radio => radio.checked);
+            const genderRadios = document.querySelectorAll('input[name="gender"]');
+            const selectedGender = Array.from(genderRadios).find(radio => radio.checked);
 
             if (isNaN(weight) || isNaN(height) || isNaN(age) || !selectedGender)  {
                 alert("Mohon isi data , termasuk jenis kelamin");
@@ -30,7 +30,7 @@
             }
 
 
-            var bmi = calculateBMI(weight, height);
+            let bmi = calculateBMI(weight, height);
 
             calculateButton.disabled = true;
 
@@ -48,9 +48,9 @@
 
         function calculateBMI(weight, height) {
 
-            var heightInMeter = height / 100;
+            const heightInMeter = height / 100;
 
-            var bmi = weight / (heightInMeter * heightInMeter);
+            let bmi = weight / (heightInMeter * heightInMeter);
 
             return bmi.toFixed(2);
         }
@@ -77,8 +77,8 @@
         }
 
         function displayDiseaseDiagnosis(bmi) {
-            var diagnosisSection = document.querySelector('.disease');
-            var diseaseList = diagnosisSection.nextElementSibling;
+            const diagnosisSection = document.querySelector('.disease');
+            let diseaseList = diagnosisSection.nextElementSibling;
 
             if (diseaseList && diseaseList.tagName === 'UL') {
                 diseaseList.remove();
