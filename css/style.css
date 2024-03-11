@@ -1,6 +1,7 @@
+/* Section 1 */
 header>h1{
     text-align: center;
-    background-color: rgba(131, 43, 21, 0.308);
+    background-color: rgba(0, 0, 0, 0.308);
     color: black;
     border-radius: 8px;
 }
@@ -59,18 +60,18 @@ button{
     transition: background-color 0.4s ease;
 }
 
-#calculate-button{
+.button1{
     background-color: bisque;
     color: black;
    
 }
 
-#calculate-button:hover{
+.button1:hover{
     background-color: brown;
     color: white;
 }
 
-#reset-button:hover{
+.button2:hover{
     background-color: navy;
     color: white;
 }
@@ -81,3 +82,22 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+/* Section 2 */
+.bmi-result{
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
+.bmi-result>p{
+    text-align: left;
+}
+
+/* Section 3 */
+.diagnosis{
+    text-align: center;
+    background-color: rgba(241, 255, 202, 0.3);
+    padding: 10px;
+}
+
