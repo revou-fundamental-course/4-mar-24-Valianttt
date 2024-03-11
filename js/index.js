@@ -10,6 +10,15 @@
         let resultSection = document.querySelector('.result');
         let resultSuggestion = document.querySelector('.suggestion');
     
+        function calculateBMI(weight, height) {
+
+            const heightInMeter = height / 100;
+
+            let bmi = weight / (heightInMeter * heightInMeter);
+
+            return bmi.toFixed(2);
+        }
+        
         calculateButton.addEventListener('click', function () {
 
             let weight = parseFloat(weightInput.value);
@@ -44,17 +53,6 @@
             displayBMICategory(bmi);
             displayDiseaseDiagnosis(bmi);
         });
-
-
-        function calculateBMI(weight, height) {
-
-            const heightInMeter = height / 100;
-
-            let bmi = weight / (heightInMeter * heightInMeter);
-
-            return bmi.toFixed(2);
-        }
-
 
         function displayBMICategory(bmi) {
             if (bmi < 18.5) {
@@ -130,15 +128,15 @@
 
             
 
-            var genderRadios = document.querySelectorAll('input[name="gender"]');
+            const genderRadios = document.querySelectorAll('input[name="gender"]');
             genderRadios.forEach(radio => radio.checked = false);
             
-            var diseaseList = document.querySelector('.disease + ul');
+            let diseaseList = document.querySelector('.disease + ul');
             if (diseaseList){
                 diseaseList.innerHTML = '';
             }
 
-            var diagnosisSection = document.querySelector('.disease');
+            let diagnosisSection = document.querySelector('.disease');
             diagnosisSection.textContent = '';
 
         });
