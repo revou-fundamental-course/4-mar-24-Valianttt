@@ -1,16 +1,72 @@
+/* Animation Code */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    
+}
+
+@keyframes fadeBg {
+    from {background-color: #333;}
+    to {background-color: white;}
+}
+
+@keyframes slideIn {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+
+}
+
 /* Section 1 */
-header>h1{
+header{
+    animation: fadeInUp .1s ease-out;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.308);
+    border-radius: 20px;
+}
+
+.title{
     color: black;
-    border-radius: 8px;
+    animation: fadeOut 3s ease-in;
 }
 
 .main-container{
+    animation: fadeIn 1.5s ease-in-out;
     display: flex;
 }
 
 .container-item{
+    animation: fadeBg;
+    animation-duration: 2s;
+    background-color: white;
     border-style: double;
     border-color: saddlebrown;
     width: 100%;
@@ -18,7 +74,16 @@ header>h1{
 }
 
 .container-item>h2{
+    animation: slideIn;
+    animation-duration: 2s;
+    animation-direction: alternate;
     text-align: center;
+}
+
+.container-item>p, h3{
+    animation: slideIn;
+    animation-duration: 2s;
+    animation-direction: alternate;
 }
 
 .container-form{
@@ -92,6 +157,9 @@ footer {
 
 .bmi-result>p{
     text-align: left;
+    animation: slideIn;
+    animation-duration: 2s;
+    animation-direction: alternate;
 }
 
 /* Section 3 */
