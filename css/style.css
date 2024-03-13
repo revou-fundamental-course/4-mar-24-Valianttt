@@ -170,10 +170,12 @@ footer {
 
 /* Section 3 */
 .diagnosis{
+    animation: fadeBg !important;
+    animation-duration: 2s !important;
     text-align: center;
     background-color: white;
     padding: 10px;
-    animation: fadeBg !important;
-    animation-duration: 2s !important;
+    border-radius: 20px;
+
 }
 
