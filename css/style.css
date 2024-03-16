@@ -57,6 +57,7 @@ header{
     text-align: center;
     background-color: rgba(0, 0, 0, 0.308);
     border-radius: 20px;
+    width: 100%;
 }
 
 .title{
@@ -69,7 +70,7 @@ header{
     display: flex;
 }
 
-.container-item{
+.container-item, #container-item-result{
     animation: fadeBg;
     animation-duration: 2s;
     background-color: white;
@@ -79,14 +80,14 @@ header{
     padding: 24px;
 }
 
-.container-item>h2{
+.container-item, #container-item-result h2{
     animation: slideIn;
     animation-duration: 2s;
     animation-direction: alternate;
     text-align: center;
 }
 
-.container-item>p, h3{
+.container-item, #container-item-result p, h3{
     animation: slideIn;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -179,3 +180,14 @@ footer {
 
 }
 
+@media screen and (max-width: 768px) {
+    .main-container{
+        flex-direction: column;
+    }
+
+    .container-item, #container-item-result{
+        width: auto;
+        padding: 10px;
+    }
+    
+}
